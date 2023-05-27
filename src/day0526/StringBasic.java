@@ -1,4 +1,4 @@
-package day03;
+package day0526;
 
 /**
  * String 类型变量的使用

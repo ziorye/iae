@@ -1,4 +1,4 @@
-package day03;
+package day0526;
 
 /**
  * 强制类型转换
