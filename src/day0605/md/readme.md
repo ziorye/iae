@@ -18,3 +18,8 @@ ref: https://docs.oracle.com/javase/tutorial/getStarted/intro/definition.html
 ## 额外想说的
 - 笔记
 - 图
+
+## 杨辉三角
+![img_5.png](img_5.png)
+
+![img_6.png](img_6.png)
