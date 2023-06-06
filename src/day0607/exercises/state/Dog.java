@@ -1,4 +1,4 @@
-package day0607.exercises;
+package day0607.exercises.state;
 
 /**
  * Exercises 2
