@@ -13,13 +13,17 @@ package day0607;
  *
  * state and behavior
  *   - An object stores its state in fields (variables in some programming languages)
+ *     state field属性 variable变量
  *   - and exposes its behavior through methods (functions in some programming languages)
+ *     behavior method方法 function函数
  *
  * You may also occasionally see the term "member" used as well. A type's fields, methods, and nested types are collectively called its members.
+ * member成员
  *
  */
 public class Member {
     // state
+
 
     // behavior
 }
