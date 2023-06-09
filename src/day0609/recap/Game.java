@@ -3,13 +3,11 @@ package day0609.recap;
 import java.util.Scanner;
 
 class Game {
-
     String userPick;
     String computerPick;
     String result;
 
     String getComputerPick() {
-
         String computerPick;
         // get an integer from 1 to 3
         int randomNumber = (int) (Math.random() * 3) + 1;
@@ -30,7 +28,6 @@ class Game {
     }
 
     String getUserPick() {
-
         Scanner input = new Scanner(System.in);
 
         String userPick;
@@ -49,7 +46,6 @@ class Game {
 
     // return either "win", "lose" or "draw"
     String getResult(String userPick, String computerPick) {
-
         // condition for user to draw
         if (userPick.equals(computerPick)) {
             return "draw";
@@ -77,7 +73,6 @@ class Game {
 
 class Main {
     public static void main(String[] args) {
-
         Game game = new Game();
         String userPick = game.getUserPick();
         String computerPick = game.getComputerPick();
@@ -86,6 +81,5 @@ class Main {
         System.out.println("User Pick: " + userPick);
         System.out.println("Computer Pick: " + computerPick);
         System.out.println("You " + result);
-
     }
 }

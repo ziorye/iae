@@ -1,27 +1,28 @@
 package day0609.constructor.exercises.e2.demo;
 
 public class Customer {
-
     private String firstName;
     private String lastName;
     private Account account;
 
-    public Customer(String f,String l){
+    public Customer(String f, String l) {
         firstName = f;
         lastName = l;
     }
 
-    public String getFirstName(){
+    public String getFirstName() {
         return firstName;
     }
-    public String getLastName(){
+
+    public String getLastName() {
         return lastName;
     }
 
-    public void setAccount(Account a){
+    public void setAccount(Account a) {
         account = a;
     }
-    public Account getAccount(){
+
+    public Account getAccount() {
         return account;
     }
 }

@@ -5,19 +5,14 @@ import java.util.Scanner;
 class RockPaperScissors {
     // returns either "rock", "paper" or "scissors"
     String getComputerChoice() {
-
         String computerChoice;
         int randomNumber = (int) (Math.random() * 3) + 1;
 
         if (randomNumber == 1) {
             computerChoice = "rock";
-        }
-
-        else if (randomNumber == 2) {
+        } else if (randomNumber == 2) {
             computerChoice = "paper";
-        }
-
-        else {
+        } else {
             computerChoice = "scissors";
         }
 
@@ -26,7 +21,6 @@ class RockPaperScissors {
 
     // returns user input
     String getUserInput() {
-
         Scanner input = new Scanner(System.in);
 
         System.out.println("Enter rock, paper or scissors:");
@@ -39,7 +33,6 @@ class RockPaperScissors {
 
     // return either "win", "lose" or "draw"
     String getResult(String userInput, String computerChoice) {
-
         // condition for user to draw
         if (userInput.equals(computerChoice)) {
             return "draw";
@@ -48,13 +41,9 @@ class RockPaperScissors {
         // condition for user to win
         else if (userInput.equals("paper") && computerChoice.equals("rock")) {
             return "win";
-        }
-
-        else if (userInput.equals("rock") && computerChoice.equals("scissors")) {
+        } else if (userInput.equals("rock") && computerChoice.equals("scissors")) {
             return "win";
-        }
-
-        else if (userInput.equals("scissors") && computerChoice.equals("paper")) {
+        } else if (userInput.equals("scissors") && computerChoice.equals("paper")) {
             return "win";
         }
 
@@ -65,13 +54,12 @@ class RockPaperScissors {
     }
 
     public static void main(String[] args) {
-
         // creating object of Main class
         RockPaperScissors obj = new RockPaperScissors();
 
         // get user input
         String userInput;
-        while(true) {
+        while (true) {
             userInput = obj.getUserInput();
 
             if (userInput.equals("rock") || userInput.equals("paper") || userInput.equals("scissors")) {

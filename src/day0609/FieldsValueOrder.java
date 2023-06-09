@@ -7,6 +7,7 @@ package day0609;
  * ① 默认初始化；
  * ② 显式初始化；
  * ③ 构造器中初始化；
+ * === === ===
  * ④ 通过"对象.方法"的方式赋值；
  * ⑤ 通过"对象.属性"的方式赋值；
  *
@@ -38,7 +39,7 @@ class User{
     int age = 10;
 
     public User(){
-        age = 20;
+        this.age = 20;
     }
 
     public User(int a){
