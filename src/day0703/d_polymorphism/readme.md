@@ -29,3 +29,20 @@ command + click
 
 ### 好处：
 极大的减少了代码的冗余，不需要定义多个重载的方法。
+
+## instanceof
+### 向上转型：多态
+满足前提
+### 向下转型：强转
+可能报错
+为了代码的健壮性，在向下转型之前应该用 instanceof 进行判断，避免出现类型转换异常
+格式： a instanceof A : 判断对象a是否是类A的实例
+如果 a instanceOf A 返回 true，则：
+    a instanceOf superA 返回也是true。其中，A 是 superA 的子类。
+
+/*
+* 1. 建议在向下转型之前，使用instanceof进行判断，避免出现类型转换异常
+* 2. 格式： a instanceOf A : 判断对象a是否是类A的实例。
+* 3. 如果a instanceOf A 返回true，则：
+*       a instanceOf superA 返回也是true。其中，A 是superA的子类。
+* */
