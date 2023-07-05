@@ -35,8 +35,9 @@ class EnumSingletonTest {
 
         Constructor<EnumSingleton> declaredConstructor = EnumSingleton.class.getDeclaredConstructor(String.class, int.class);
         declaredConstructor.setAccessible(true);
-        EnumSingleton s2 = declaredConstructor.newInstance("INSTANCE", 0);
-        System.out.println(s2);
+        assertThrows(IllegalArgumentException.class, () -> {
+            declaredConstructor.newInstance("INSTANCE", 0);
+        });
     }
 
     @Test
