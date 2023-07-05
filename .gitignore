@@ -2,3 +2,9 @@
 *.iml
 out
 target
+# --- --- ---
+# EagerSingletonSerializableTest.testDestroyBySerialized
+instance
+# EnumSingletonTest.testDestroyBySerialized
+instance-enum
+# --- --- ---
