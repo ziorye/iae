@@ -10,7 +10,7 @@ import static com.slack.api.webhook.WebhookPayloads.payload;
 
 public class WebhooksDemo {
     private static final Slack SLACK = Slack.getInstance();
-    private static final String WEBHOOK_URL = "https://hooks.slack.com/services/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";
+    private static final String WEBHOOK_URL = System.getenv("webhook_url");
 
     public static void main(String[] args) throws IOException {
         WebhooksDemo.simpleText();
