@@ -34,7 +34,7 @@ create table tb_emp(
                        gender      tinyint unsigned             not null comment '性别, 1 男, 2 女',
                        image       varchar(300)                 null comment '图像url',
                        job         tinyint unsigned             null comment '职位, 1 班主任 , 2 讲师 , 3 学工主管, 4 教研主管',
-                       entrydate   date                         null comment '入职日期',
+                       entry_date   date                         null comment '入职日期',
                        create_time datetime                     not null comment '创建时间',
                        update_time datetime                     not null comment '修改时间',
                        constraint tb_emp_username_uindex unique (username)
@@ -80,22 +80,24 @@ rename table emp to tb_emp;
 insert into tb_emp(username,name,gender,create_time,update_time) values ('ergou','二狗',1,now(),now());
 
 -- 2. 为 tb_emp 表的 所有字段插入值
-insert into tb_emp(id, username, password, name, gender, image, job, entrydate, create_time, update_time)
+insert into tb_emp(id, username, password, name, gender, image, job, entry_date, create_time, update_time)
 values (null,'erdan','123','二蛋',2,'1.jpg',1,'2010-01-01',now(),now());
+
 
 insert into tb_emp values (null,'ergouzi','123','二狗子',2,'1.jpg',1,'2010-01-01',now(),now());
 
+
 -- 3. 批量为 为 tb_emp 表的 username , name , gender 字段插入数据
-insert into tb_emp(username,name,gender,create_time,update_time) values
-                                                                     ('xiaoyang','小样',1,now(),now()),('pig','二弟',1,now(),now());
+insert into tb_emp(username, name, gender, create_time, update_time)
+values ('xiaoyang', '小样', 1, now(), now()),
+       ('pig', '二弟', 1, now(), now());
 
 -- DML : 更新数据 - update
 -- 1. 将 tb_emp 表的ID为1员工 姓名name字段更新为 '张三'
 update tb_emp set name = '张三' , update_time = now() where id = 1;
 
 -- 2. 将 tb_emp 表的所有员工的入职日期更新为 '2010-01-01'
-update tb_emp set entrydate = '2010-01-01', update_time = now();
-
+update tb_emp set entry_date = '2010-01-01', update_time = now();
 
 -- DML : 删除数据 - delete
 -- 1. 删除 tb_emp 表中 ID为1的员工
