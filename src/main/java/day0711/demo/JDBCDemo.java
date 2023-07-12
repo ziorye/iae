@@ -25,7 +25,7 @@ public class JDBCDemo {
 
     public Connection getConnection() throws SQLException {
         Connection conn = null;
-        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/jdbc", "root", System.getenv("db_password"));
+        conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/db2?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&useSSL=false", "root", System.getenv("db_password"));
         System.out.println("Connected to database");
         return conn;
     }
@@ -41,7 +41,7 @@ public class JDBCDemo {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
                 int balance = rs.getInt("balance");
-                System.out.println(id + "\t" + name);
+                System.out.println(id + "\t" + name + "\t" + balance);
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -68,7 +68,7 @@ public class JDBCDemo {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
                 int balance = rs.getInt("balance");
-                System.out.println(id + "\t" + name);
+                System.out.println(id + "\t" + name + "\t" + balance);
             }
         } catch (SQLException e) {
             e.printStackTrace();
